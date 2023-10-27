@@ -1,0 +1,68 @@
+@mixin padding($value) {
+  padding-top: $value;
+  padding-bottom: $value;
+  padding-left: $value;
+  padding-right: $value;
+}
+@mixin margin($value) {
+  margin-top: $value;
+  margin-bottom: $value;
+  margin-left: $value;
+  margin-right: $value;
+}
+@mixin font($value1, $value2) {
+  font-family: "Noto Sans", sans-serif;
+  color: black;
+  font-size: $value1;
+  font-weight: $value2;
+}
+* {
+  background-color: #faf0e4;
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+.logo {
+  width: 100px;
+  @include padding(20px);
+  margin-left: 50px;
+}
+.navbarcase {
+  display: flex;
+  align-items: center;
+}
+.navlinks {
+  display: flex;
+  flex-direction: row;
+  @include font(2.3rem, 500);
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.navlinks div {
+  @include padding(10px);
+  margin-left: 20px;
+}
+.navlink.box {
+  border: 1px solid black;
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-top: 12px;
+  padding-bottom: 14px;
+  border-radius: 25px;
+}
+#shadedbox {
+  background-color: black;
+  color: #faf0e4;
+}
+
+@media screen and (min-width: 480px) {
+  // This will be smallest drop off to 1 column testimonials, 1 column in bottom icons and 2 columns in bottom nav
+}
+@media screen and (min-width: 760px) {
+  // This will be next switch to 2 columns in testamonials,  2 columns in all icons and 3 columns in bottom nav
+}
+@media screen and (min-width: 990px) {
+  // This will be next switch to 3 columns in testamonials, 3 columns mid icons,  2 column in bottom icons and 5+ columns in bottom nav
+}
+@media screen and (min-width: 1450px) {
+  // Same as previous however nav stops to grow and just centers as does rest of site
+}

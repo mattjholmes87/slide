@@ -1,1 +1,52 @@
-/*# sourceMappingURL=style.css.map */
+* {
+  background-color: #faf0e4;
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+.logo {
+  width: 100px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: 50px;
+}
+
+.navbarcase {
+  display: flex;
+  align-items: center;
+}
+
+.navlinks {
+  display: flex;
+  flex-direction: row;
+  font-family: "Noto Sans", sans-serif;
+  color: black;
+  font-size: 2.3rem;
+  font-weight: 500;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.navlinks div {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 20px;
+}
+
+.navlink.box {
+  border: 1px solid black;
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-top: 12px;
+  padding-bottom: 14px;
+  border-radius: 25px;
+}
+
+#shadedbox {
+  background-color: black;
+  color: #faf0e4;
+}/*# sourceMappingURL=style.css.map */
