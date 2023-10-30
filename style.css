@@ -2,6 +2,10 @@
   background-color: #faf0e4;
   font-size: 62.5%;
   box-sizing: border-box;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 .logo {
@@ -10,43 +14,112 @@
   padding-bottom: 20px;
   padding-left: 20px;
   padding-right: 20px;
-  margin-left: 50px;
+  margin-left: 20px;
+  height: 80px;
 }
 
 .navbarcase {
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 0 15px 6px rgba(204, 204, 204, 0.33);
 }
 
 .navlinks {
-  display: flex;
-  flex-direction: row;
-  font-family: "Noto Sans", sans-serif;
-  color: black;
-  font-size: 2.3rem;
-  font-weight: 500;
-  margin-left: 50px;
-  margin-right: 50px;
+  display: none;
 }
 
-.navlinks div {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-left: 20px;
+.navlink2 {
+  font-size: 4rem;
+  font-weight: 100;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-right: 5px;
 }
 
-.navlink.box {
-  border: 1px solid black;
-  padding-left: 18px;
-  padding-right: 18px;
-  padding-top: 12px;
-  padding-bottom: 14px;
-  border-radius: 25px;
+.introduction {
+  background-color: white;
+  height: 1000px;
 }
 
-#shadedbox {
-  background-color: black;
-  color: #faf0e4;
+.casestudy {
+  background-color: #faf0e4;
+  height: 1000px;
+}
+
+@media screen and (min-width: 990px) {
+  .logo {
+    width: 100px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 60px;
+    height: 80px;
+  }
+  .navbarcase {
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 0 15px 6px rgba(204, 204, 204, 0.33);
+  }
+  .navlink2 {
+    display: none;
+  }
+  .navlinks {
+    display: flex;
+    flex-direction: row;
+    font-family: "Noto Sans", sans-serif;
+    color: black;
+    font-size: 2.3rem;
+    font-weight: 500;
+    margin-left: 20px;
+    margin-right: 38px;
+  }
+  .navlinks div {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 10px;
+    text-align: center;
+  }
+  .navlink.box {
+    border: 1px solid black;
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-top: 12px;
+    padding-bottom: 14px;
+    border-radius: 25px;
+  }
+  #shadedbox {
+    background-color: #2f2f30;
+    color: #faf0e4;
+  }
+  .box:hover {
+    background-color: #2f2f30;
+    color: #faf0e4;
+  }
+  a {
+    font: inherit;
+    text-decoration: inherit;
+    color: inherit;
+    background-color: transparent;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .navlinks div {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 20px;
+  }
 }/*# sourceMappingURL=style.css.map */
