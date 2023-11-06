@@ -72,10 +72,6 @@
   height: 1000px;
 }
 
-input[type=checkbox] {
-  display: none;
-}
-
 .dropdown {
   margin-top: 0px;
   padding-right: 70vw;
@@ -140,10 +136,65 @@ nav li a {
   width: 100%;
 }
 
-input[type=checkbox]:checked ~ nav ul {
+.level2 {
+  display: none;
+  margin: 0;
+  padding: 0;
+}
+
+#checkbox_toggle2:checked ~ nav ul {
+  display: initial;
+}
+
+.hamburger2 > div {
+  font-family: "Noto Sans", sans-serif;
+  color: black;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.dd2 {
+  padding-left: 24px;
+  font-family: "Noto Sans", sans-serif;
+  color: black;
+  font-size: 1.4rem;
+  font-weight: 500;
+  transition-timing-function: ease-in-out;
+}
+
+.dd2:hover {
+  transform: translate(10px, 0px);
+  transition-duration: 0.2s;
+  color: #3d3d3d;
+}
+
+.subtext {
+  font-family: "Noto Sans", sans-serif;
+  color: black;
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+
+.navmargin {
+  border-left: 1px solid black;
+}
+
+#checkbox_toggle3:checked ~ nav ul {
+  display: initial;
+}
+
+#checkbox_toggle4:checked ~ nav ul {
+  display: initial;
+}
+
+#checkbox_toggle1:checked ~ nav ul {
   height: auto;
-  max-height: 50vh;
+  max-height: 80vh;
   transition: all 1s cubic-bezier(0.5, 1, 0.22, 1);
+}
+
+input[type=checkbox] {
+  display: none;
 }
 
 .hamburger {
@@ -153,7 +204,6 @@ input[type=checkbox]:checked ~ nav ul {
   right: 13px;
   height: 27px;
   width: 27px;
-  cursor: pointer;
   transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
 }
 

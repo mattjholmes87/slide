@@ -78,9 +78,7 @@
   height: 1000px;
 }
 // Section for hamburger
-input[type="checkbox"] {
-  display: none;
-}
+
 // distance below top of screen
 .dropdown {
   margin-top: 0px;
@@ -135,11 +133,54 @@ nav li a {
   text-decoration: none;
   width: 100%;
 }
-input[type="checkbox"]:checked ~ nav ul {
+
+// Level 2 dropdown button 1
+.level2 {
+  display: none;
+  margin: 0;
+  padding: 0;
+}
+#checkbox_toggle2:checked ~ nav ul {
+  display: initial;
+}
+.hamburger2 > div {
+  @include font(1.4rem, 500);
+}
+.dd2 {
+  padding-left: 24px;
+  @include font(1.4rem, 500);
+  transition-timing-function: ease-in-out;
+}
+.dd2:hover {
+  transform: translate(10px, 0px);
+  transition-duration: 0.2s;
+  color: #3d3d3d;
+}
+
+.subtext {
+  @include font(1.4rem, 300);
+}
+.navmargin {
+  border-left: 1px solid black;
+}
+// Level 2 dropdown button 2
+#checkbox_toggle3:checked ~ nav ul {
+  display: initial;
+}
+// Level 2 dropdown button 3
+#checkbox_toggle4:checked ~ nav ul {
+  display: initial;
+}
+// Top layer hamburger controls
+
+#checkbox_toggle1:checked ~ nav ul {
   height: auto;
-  max-height: 50vh;
+  max-height: 80vh;
   // max height control for drop down
   transition: all 1s cubic-bezier(0.5, 1, 0.22, 1);
+}
+input[type="checkbox"] {
+  display: none;
 }
 // controls icon position and animation
 .hamburger {
@@ -149,7 +190,6 @@ input[type="checkbox"]:checked ~ nav ul {
   right: 13px;
   height: 27px;
   width: 27px;
-  cursor: pointer;
   transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
