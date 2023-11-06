@@ -44,7 +44,22 @@
   top: 0;
   box-shadow: 0 0 15px 6px rgba(204, 204, 204, 0.33);
 }
-
+.navlink.box {
+  border: 1px solid black;
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-top: 12px;
+  padding-bottom: 14px;
+  border-radius: 25px;
+}
+#shadedbox {
+  background-color: #2f2f30;
+  color: #faf0e4;
+}
+.box:hover {
+  background-color: #2f2f30;
+  color: #faf0e4;
+}
 .navlinks {
   display: none;
 }
@@ -70,32 +85,56 @@ input[type="checkbox"] {
 .dropdown {
   margin-top: 0px;
   padding-right: 70vw;
+  width: 100%;
 }
+
 nav ul {
   max-height: 0px;
   overflow: hidden;
   list-style: none;
   transition: all 1s cubic-bezier(0.325, 1, 0.22, 1);
+  width: 100%;
+}
+.horizontal > ul {
+  width: 100%;
 }
 .horizontal > li {
   display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding-top: 50px;
+  margin-bottom: 10px;
+  padding: 20px;
+  width: 200px;
+  border-top: 1px solid rgb(183, 183, 183);
+}
+.horizontal {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: auto;
+}
+.bottommenu {
+  padding-bottom: 20px;
+}
+nav {
+  padding: 0;
+  margin: 0;
+  width: 100%;
 }
 nav li {
-  border-bottom: 0.18rem solid #fff;
-  color: #fff;
-  font-size: 16px;
-  padding: 5px 0;
+  line-height: 3rem;
+  font-size: 2rem;
+  padding: 10px 0;
   display: flex;
   justify-content: left;
+  width: 100%;
 }
 nav li a {
-  font-family: Nunito;
+  @include font(1.5rem, 500);
   text-decoration: none;
+  width: 100%;
 }
-nav li a:hover {
-  text-decoration: underline;
-}
-
 input[type="checkbox"]:checked ~ nav ul {
   height: auto;
   max-height: 50vh;
