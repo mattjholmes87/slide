@@ -27,6 +27,7 @@
   font-size: 62.5%;
   box-sizing: border-box;
   @include margin(0);
+  max-width: 100vw;
 }
 .logo {
   width: 100px;
@@ -82,7 +83,7 @@
 // distance below top of screen
 .dropdown {
   margin-top: 0px;
-  padding-right: 70vw;
+  padding-right: 60vw;
   width: 100%;
 }
 
@@ -102,8 +103,6 @@ nav ul {
   text-align: center;
   padding-top: 50px;
   margin-bottom: 10px;
-  padding: 20px;
-  width: 200px;
   border-top: 1px solid rgb(183, 183, 183);
 }
 .horizontal {
@@ -175,9 +174,9 @@ nav li a {
 
 #checkbox_toggle1:checked ~ nav ul {
   height: auto;
-  max-height: 80vh;
+  max-height: 150vh;
   // max height control for drop down
-  transition: all 1s cubic-bezier(0.5, 1, 0.22, 1);
+  transition: all 3s cubic-bezier(0.5, 1, 0.22, 1);
 }
 input[type="checkbox"] {
   display: none;
