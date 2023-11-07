@@ -15,7 +15,7 @@
   padding-bottom: 20px;
   padding-left: 20px;
   padding-right: 20px;
-  margin-left: 20px;
+  margin-left: 0px;
   height: 80px;
   margin-top: 20px;
 }
@@ -62,16 +62,6 @@
   padding-left: 20px;
   padding-right: 20px;
   margin-right: 5px;
-}
-
-.introduction {
-  background-color: white;
-  height: 1000px;
-}
-
-.casestudy {
-  background-color: #faf0e4;
-  height: 1000px;
 }
 
 nav ul {
@@ -250,7 +240,183 @@ input[type=checkbox]:checked ~ label .line-3 {
   transform: translateX(-8px) rotate(45deg) translateY(-8px);
 }
 
+h1 {
+  font-family: "Noto Sans", sans-serif;
+  color: black;
+  font-size: 4rem;
+  font-weight: 500;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 50px;
+  padding-bottom: 0px;
+  -webkit-hyphens: auto;
+          hyphens: auto;
+}
+
+p {
+  font-family: "Noto Sans", sans-serif;
+  color: black;
+  font-size: 1.8rem;
+  font-weight: 300;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.emailsignup {
+  display: flex;
+  justify-content: center;
+}
+
+#email_address {
+  width: 70%;
+  max-width: 450px;
+  height: auto;
+  font-family: "Noto Sans", sans-serif;
+  color: black;
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-right: 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border: 1px solid black;
+  align-items: center;
+  border-right: none;
+  border-radius: 25px;
+}
+
+.signupfree {
+  border: 1px solid #186ae5;
+  background-color: #186ae5;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-left: -50px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 25px;
+  width: 136px;
+  font-family: "Noto Sans", sans-serif;
+  color: black;
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: white;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.videoguide {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imgborder {
+  display: flex;
+  justify-content: center;
+  border: 1px solid black;
+  border-radius: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 110px;
+  width: 90%;
+  max-width: 740px;
+}
+
+.vidpic {
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 15px;
+}
+
+h2 {
+  font-family: "Noto Sans", sans-serif;
+  color: black;
+  font-size: 2.2rem;
+  font-weight: 300;
+  margin-left: -40px;
+  line-height: 50px;
+}
+
+.bulletbox > ol {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Noto Sans", sans-serif;
+  color: black;
+  font-size: 3rem;
+  font-weight: 300;
+  color: #98999a;
+  line-height: 50px;
+}
+
+ol > li {
+  padding-left: 20px;
+}
+
+.hover2 {
+  transition: color 0.5s;
+}
+
+.hover2:hover {
+  color: black;
+}
+
+.hover2:hover ~ .circle {
+  transform: translate(-35px, -45px);
+  opacity: 1;
+}
+
+.circle {
+  border-radius: 50%;
+  background-color: #f67748;
+  width: 40px;
+  height: 40px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  opacity: 0.1;
+  transform: translateX(-35px);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.circle:hover {
+  transform: translate(-35px, -45px);
+  opacity: 1;
+}
+
 @media screen and (min-width: 480px) {
+  .logo {
+    width: 100px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 20px;
+    height: 80px;
+    margin-top: 20px;
+  }
   .horizontal > ul {
     width: 100%;
     transition: none;
@@ -271,6 +437,33 @@ input[type=checkbox]:checked ~ label .line-3 {
     margin: auto;
     padding: 0px;
     margin-top: 10px;
+  }
+}
+@media screen and (min-width: 760px) {
+  .videoguide {
+    display: flex;
+    justify-content: center;
+  }
+  .imgborder {
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 110px;
+    width: 90%;
+    max-width: 500px;
+  }
+  .vidpic {
+    width: 100%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 15px;
   }
 }
 @media screen and (min-width: 990px) {
