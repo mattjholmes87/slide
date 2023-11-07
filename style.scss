@@ -34,6 +34,7 @@
   @include padding(20px);
   margin-left: 20px;
   height: 80px;
+  margin-top: 20px;
 }
 .navbarcase {
   display: flex;
@@ -80,13 +81,6 @@
 }
 // Section for hamburger
 
-// distance below top of screen
-.dropdown {
-  margin-top: 0px;
-  padding-right: 60vw;
-  width: 100%;
-}
-
 nav ul {
   max-height: 0px;
   overflow: hidden;
@@ -96,20 +90,26 @@ nav ul {
 }
 .horizontal > ul {
   width: 100%;
+  transition: none;
+}
+.linebreak {
+  border-top: 1px solid rgb(183, 183, 183);
 }
 .horizontal > li {
   display: inline-block;
   width: 100%;
   text-align: center;
-  padding-top: 50px;
-  margin-bottom: 10px;
-  border-top: 1px solid rgb(183, 183, 183);
+  transition: none;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .horizontal {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 100%;
   margin: auto;
+  padding: 0px;
+  margin-top: 10px;
 }
 .bottommenu {
   padding-bottom: 20px;
@@ -128,7 +128,7 @@ nav li {
   width: 100%;
 }
 nav li a {
-  @include font(1.5rem, 500);
+  @include font(1.4rem, 500);
   text-decoration: none;
   width: 100%;
 }
@@ -176,7 +176,7 @@ nav li a {
   height: auto;
   max-height: 150vh;
   // max height control for drop down
-  transition: all 3s cubic-bezier(0.5, 1, 0.22, 1);
+  transition: all 5s cubic-bezier(0.5, 1, 0.22, 1);
 }
 input[type="checkbox"] {
   display: none;
@@ -185,8 +185,8 @@ input[type="checkbox"] {
 .hamburger {
   display: block;
   position: absolute;
-  top: 30px;
-  right: 13px;
+  top: 50px;
+  right: 25px;
   height: 27px;
   width: 27px;
   transition: all 1s cubic-bezier(0.19, 1, 0.22, 1);
@@ -197,7 +197,7 @@ input[type="checkbox"] {
   display: block;
   background: #3d3d3d;
   width: 18px;
-  height: 0.15rem;
+  height: 0.2rem;
   border-radius: 0.2rem;
   left: 0;
   transition: all 0.6s cubic-bezier(0.5, 0.1, 0, 1.2);
@@ -235,6 +235,27 @@ input[type="checkbox"]:checked ~ label .line-3 {
 }
 @media screen and (min-width: 480px) {
   // This will be smallest drop off to 1 column testimonials, 1 column in bottom icons and 2 columns in bottom nav
+  .horizontal > ul {
+    width: 100%;
+    transition: none;
+  }
+  .horizontal > li {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    transition: none;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid rgb(183, 183, 183);
+  }
+  .horizontal {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: auto;
+    padding: 0px;
+    margin-top: 10px;
+  }
 }
 @media screen and (min-width: 760px) {
   // This will be next switch to 2 columns in testamonials,  2 columns in all icons and 3 columns in bottom nav
@@ -254,7 +275,8 @@ input[type="checkbox"]:checked ~ label .line-3 {
     top: 0;
     box-shadow: 0 0 15px 6px rgba(204, 204, 204, 0.33);
   }
-  .navlinksmob {
+  .hamburger,
+  .level1 {
     display: none;
   }
   .navlinks {
