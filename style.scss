@@ -317,9 +317,7 @@ ol > li {
 .hover2:hover {
   color: black;
 }
-.hover2:hover::before {
-  color: red;
-}
+
 .hover2:hover .circle {
   opacity: 1;
 }
