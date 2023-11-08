@@ -102,7 +102,7 @@ nav ul {
   max-height: 0px;
   overflow: hidden;
   list-style: none;
-  transition: all 1s cubic-bezier(0.325, 1, 0.22, 1);
+  transition: all 5s cubic-bezier(0.325, 1, 0.22, 1);
   width: 100%;
 }
 
@@ -221,7 +221,7 @@ nav li a {
 
 #checkbox_toggle1:checked ~ nav ul {
   max-height: 150vh;
-  transition: all 5s cubic-bezier(0.5, 1, 0.22, 1);
+  transition: all 2s cubic-bezier(0.5, 1, 0.22, 1);
 }
 
 input[type=checkbox] {
@@ -494,6 +494,12 @@ ol > li {
 }
 
 @media screen and (min-width: 480px) {
+  nav ul {
+    transition: all 0s cubic-bezier(0.325, 1, 0.22, 1);
+  }
+  nav li {
+    transition: all 0s cubic-bezier(0.325, 1, 0.22, 1);
+  }
   .logo {
     width: 100px;
     padding-top: 20px;
@@ -616,7 +622,7 @@ ol > li {
     font-size: 6.2rem;
   }
   .introduction {
-    animation: fadeonload 1.5s ease-in-out, moveuponload 0.7s ease-in-out;
+    animation: fadeonload 1.2s ease-in-out, moveuponload 0.7s ease-in-out;
   }
 }
 @media screen and (min-width: 990px) {
@@ -727,5 +733,5 @@ ol > li {
   }
 }
 .navbarcase {
-  animation: droponload 2s ease-in-out;
+  animation: droponload 1.5s ease-in-out;
 }/*# sourceMappingURL=style.css.map */

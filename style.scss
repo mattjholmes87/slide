@@ -112,7 +112,7 @@ nav ul {
   max-height: 0px;
   overflow: hidden;
   list-style: none;
-  transition: all 1s cubic-bezier(0.325, 1, 0.22, 1);
+  transition: all 5s cubic-bezier(0.325, 1, 0.22, 1);
   width: 100%;
 }
 .horizontal > ul {
@@ -209,7 +209,7 @@ nav li a {
 #checkbox_toggle1:checked ~ nav ul {
   max-height: 150vh;
   // max height control for drop down
-  transition: all 5s cubic-bezier(0.5, 1, 0.22, 1);
+  transition: all 2s cubic-bezier(0.5, 1, 0.22, 1);
 }
 input[type="checkbox"] {
   display: none;
@@ -425,6 +425,12 @@ ol > li {
 // Media Queries
 @media screen and (min-width: 480px) {
   // This will be smallest drop off to 1 column testimonials, 1 column in bottom icons and 2 columns in bottom nav
+  nav ul {
+    transition: all 0s cubic-bezier(0.325, 1, 0.22, 1);
+  }
+  nav li {
+    transition: all 0s cubic-bezier(0.325, 1, 0.22, 1);
+  }
   .logo {
     width: 100px;
     @include padding(20px);
@@ -542,7 +548,7 @@ ol > li {
   //
   // Animations
   .introduction {
-    animation: fadeonload 1.5s ease-in-out, moveuponload 0.7s ease-in-out;
+    animation: fadeonload 1.2s ease-in-out, moveuponload 0.7s ease-in-out;
   }
 }
 @media screen and (min-width: 990px) {
@@ -645,5 +651,5 @@ ol > li {
 //
 // Animations
 .navbarcase {
-  animation: droponload 2s ease-in-out;
+  animation: droponload 1.5s ease-in-out;
 }
