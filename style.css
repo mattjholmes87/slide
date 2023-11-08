@@ -1,3 +1,33 @@
+@keyframes droponload {
+  0% {
+    transform: translateY(-100%);
+  }
+  80% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@keyframes moveuponload {
+  0% {
+    transform: translateY(60%);
+  }
+  0% {
+    transform: translateY(30%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@keyframes fadeonload {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 * {
   background-color: #faf0e4;
   font-size: 62.5%;
@@ -36,9 +66,12 @@
   border: 1px solid black;
   padding-left: 18px;
   padding-right: 18px;
-  padding-top: 12px;
-  padding-bottom: 14px;
+  padding-top: 6px;
+  padding-bottom: 6px;
   border-radius: 25px;
+  width: 150px;
+  display: block;
+  align-self: center;
 }
 
 #shadedbox {
@@ -76,6 +109,9 @@ nav ul {
 .horizontal > ul {
   width: 100%;
   transition: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .linebreak {
@@ -83,7 +119,9 @@ nav ul {
 }
 
 .horizontal > li {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 100%;
   text-align: center;
   transition: none;
@@ -94,10 +132,12 @@ nav ul {
 .horizontal {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   width: 100%;
   margin: auto;
   padding: 0px;
   margin-top: 10px;
+  transition: none;
 }
 
 .bottommenu {
@@ -180,12 +220,15 @@ nav li a {
 }
 
 #checkbox_toggle1:checked ~ nav ul {
-  height: auto;
   max-height: 150vh;
   transition: all 5s cubic-bezier(0.5, 1, 0.22, 1);
 }
 
 input[type=checkbox] {
+  display: none;
+}
+
+input[type=radio] {
   display: none;
 }
 
@@ -241,7 +284,8 @@ input[type=checkbox]:checked ~ label .line-3 {
   transform: translateX(-8px) rotate(45deg) translateY(-8px);
 }
 
-h1 {
+h1,
+h3 {
   font-family: "Noto Sans", sans-serif;
   color: black;
   font-size: 4rem;
@@ -377,11 +421,12 @@ ol > li {
 .hover2 {
   transition: color 0.5s;
   position: relative;
-  line-height: 40px;
+  line-height: 50px;
 }
 
 .hover2:hover {
   color: black;
+  list-style: none;
 }
 
 .hover2:hover .circle {
@@ -391,6 +436,13 @@ ol > li {
 .hover2:hover .arrow {
   transform: translateY(0%);
   opacity: 1;
+}
+
+.hover2:hover .number {
+  transform: translateY(50%);
+  opacity: 0;
+  color: black;
+  z-index: 1;
 }
 
 .arrow {
@@ -404,8 +456,8 @@ ol > li {
   font-size: 2rem;
   opacity: 0;
   background-color: transparent;
-  transform: translateY(-100%);
-  transition: opacity 0.3s ease-in-out, transform 0.5s ease-in-out;
+  transform: translateY(-75%);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-in-out;
 }
 
 .circle {
@@ -416,11 +468,25 @@ ol > li {
   text-align: center;
   color: white;
   position: absolute;
-  top: 0px;
+  top: 5px;
   left: -32px;
   font-size: 2rem;
   opacity: 0;
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.number {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  color: #98999a;
+  background-color: transparent;
+  position: absolute;
+  top: 0px;
+  z-index: -1;
+  left: -32px;
+  font-size: 2rem;
+  transition: opacity 0.5s ease-out, transform 0.5s ease-in-out;
 }
 
 .overview {
@@ -443,13 +509,16 @@ ol > li {
     transition: none;
   }
   .horizontal > li {
-    display: inline-block;
     width: 100%;
     text-align: center;
     transition: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding-top: 20px;
     padding-bottom: 20px;
     border-top: 1px solid rgb(183, 183, 183);
+    transition: none;
   }
   .horizontal {
     display: flex;
@@ -458,12 +527,15 @@ ol > li {
     margin: auto;
     padding: 0px;
     margin-top: 10px;
+    transition: none;
   }
 }
 @media screen and (min-width: 760px) {
   .videoguide {
     display: flex;
+    flex-direction: row;
     justify-content: center;
+    justify-content: space-around;
   }
   .imgborder {
     display: flex;
@@ -475,8 +547,8 @@ ol > li {
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 110px;
-    width: 90%;
-    max-width: 500px;
+    width: 40%;
+    max-width: 600px;
   }
   .vidpic {
     width: 100%;
@@ -485,6 +557,66 @@ ol > li {
     padding-left: 5px;
     padding-right: 5px;
     border-radius: 15px;
+  }
+  .bulletbox {
+    margin-top: 80px;
+    width: 30%;
+  }
+  .level1 {
+    height: 0px;
+  }
+  .logo {
+    width: 100px;
+    height: 80px;
+    margin: 0;
+    margin-left: 10px;
+  }
+  .navbarcase {
+    height: 80px;
+  }
+  .hamburger {
+    top: 35px;
+    right: 25px;
+  }
+  .navlogo {
+    height: 80px;
+  }
+  .horizontal {
+    margin: 0px;
+    align-items: center;
+    height: 72px;
+    display: flex;
+    justify-content: center;
+    transition: none;
+  }
+  .horizontal > li {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    transition: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 1px solid rgb(183, 183, 183);
+    min-height: 72px;
+    transition: none;
+  }
+  #horizontal {
+    transition: none;
+  }
+  .introduction {
+    width: 65%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  h1 {
+    font-size: 6.2rem;
+  }
+  .introduction {
+    animation: fadeonload 1.5s ease-in-out, moveuponload 0.7s ease-in-out;
   }
 }
 @media screen and (min-width: 990px) {
@@ -501,6 +633,8 @@ ol > li {
     display: flex;
     align-items: center;
     position: sticky;
+    align-content: center;
+    height: 80px;
     top: 0;
     box-shadow: 0 0 15px 6px rgba(204, 204, 204, 0.33);
   }
@@ -508,15 +642,22 @@ ol > li {
   .level1 {
     display: none;
   }
+  .logo {
+    width: 100px;
+    height: 80px;
+    margin: 0;
+    margin-left: 50px;
+  }
   .navlinks {
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
     font-family: "Noto Sans", sans-serif;
     color: black;
     font-size: 2.3rem;
     font-weight: 500;
-    margin-left: 20px;
-    margin-right: 38px;
+    margin-left: 10px;
+    margin-right: 24px;
   }
   .navlinks div {
     padding-top: 10px;
@@ -548,8 +689,35 @@ ol > li {
     color: inherit;
     background-color: transparent;
   }
+  .navlink.box {
+    border: 1px solid black;
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-radius: 25px;
+    width: 150px;
+    display: block;
+  }
+  .imgborder {
+    display: flex;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 110px;
+    width: 50%;
+    max-width: 520px;
+  }
 }
 @media screen and (min-width: 1100px) {
+  .dummybody {
+    margin: 0 auto;
+    max-width: 1100px;
+  }
   .navlinks div {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -557,4 +725,7 @@ ol > li {
     padding-right: 10px;
     margin-left: 20px;
   }
+}
+.navbarcase {
+  animation: droponload 2s ease-in-out;
 }/*# sourceMappingURL=style.css.map */

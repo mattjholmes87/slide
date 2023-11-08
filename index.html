@@ -17,7 +17,17 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <script>
+      if (history.scrollRestoration) {
+        history.scrollRestoration = "manual";
+      } else {
+        window.onbeforeunload = function () {
+          window.scrollTo(0, 0);
+        };
+      }
+    </script>
   </head>
+
   <body>
     <section class="navbarcase">
       <div class="navlogo">
@@ -34,7 +44,7 @@
         <ul>
           <li>
             <div>
-              <input type="checkbox" id="checkbox_toggle2" />
+              <input type="radio" name="submenu" id="checkbox_toggle2" />
               <label for="checkbox_toggle2" class="hamburger2">
                 <div>Product &#x2304;</div>
               </label>
@@ -88,7 +98,7 @@
           </li>
           <li>
             <div>
-              <input type="checkbox" id="checkbox_toggle3" />
+              <input type="radio" name="submenu" id="checkbox_toggle3" />
               <label for="checkbox_toggle3" class="hamburger2">
                 <div>Solutions &#x2304;</div>
               </label>
@@ -113,7 +123,7 @@
           <li><a href="#" class="navlink">Pricing</a></li>
           <li>
             <div>
-              <input type="checkbox" id="checkbox_toggle4" />
+              <input type="radio" name="submenu" id="checkbox_toggle4" />
               <label for="checkbox_toggle4" class="hamburger2">
                 <div>Resources &#x2304;</div>
               </label>
@@ -156,7 +166,7 @@
             </div>
           </li>
         </ul>
-        <ul class="horizontal">
+        <ul class="horizontal" id="horizontal">
           <li class="linebreak"><a href="#">Sign In</a></li>
           <li><a href="#" class="navlink box"> Book a demo</a></li>
           <li>
@@ -177,69 +187,78 @@
         </div>
       </div>
     </section>
-    <section class="introduction">
-      <h1>Your company know&shy;ledge base, on autopilot.</h1>
-      <p>
-        Free up your team from the burdens of creating, managing and finding
-        trusted company information. Single source of truth is finally possible
-        with Slite's collaborative knowledge base, powered by AI.
-      </p>
-      <div class="emailsignup">
-        <input
-          type="email"
-          id="email_address"
-          name="email_address"
-          placeholder="name@company.com"
-          required
-        />
-        <div class="signupfree">Sign up for free</div>
-      </div>
-    </section>
-    <section class="videoguide">
-      <div class="imgborder">
-        <img
-          src="./images/videoimage.png"
-          alt="picture of video until source found"
-          class="vidpic"
-        />
-      </div>
-      <div class="bulletbox">
-        <h2>Designed for</h2>
-        <ol>
-          <li class="hover2">
-            All types of knowledge
-            <div class="circle"></div>
-            <div class="arrow">&darr;</div>
-          </li>
-          <li class="hover2">
-            Instant trusted answers
-            <div class="circle"></div>
-            <div class="arrow">&darr;</div>
-          </li>
-          <li class="hover2">
-            Knowledge management at scale
-            <div class="circle"></div>
-            <div class="arrow">&darr;</div>
-          </li>
-        </ol>
-      </div>
-    </section>
-    <section class="overview">
-      <h1>Designed for all types of knowledge.</h1>
-      <p>
-        From onboarding guides to all-hands notes, Slite is flexible to easily
-        document all types of company knowledge.
-      </p>
-    </section>
-    <section class="ai"></section>
-    <section class="recommend"></section>
-    <section class="howitworks"></section>
-    <section class="management"></section>
-    <section class="casestudy"></section>
-    <section class="time"></section>
-    <section class="reviews"></section>
-    <section class="trial"></section>
-    <section class="bottomnav"></section>
-    <footer></footer>
+    <div class="dummybody">
+      <section class="introduction">
+        <h1>Your company know&shy;ledge base, on autopilot.</h1>
+        <p>
+          Free up your team from the burdens of creating, managing and finding
+          trusted company information. Single source of truth is finally
+          possible with Slite's collaborative knowledge base, powered by AI.
+        </p>
+        <div class="emailsignup">
+          <input
+            type="email"
+            id="email_address"
+            name="email_address"
+            placeholder="name@company.com"
+            required
+          />
+          <div class="signupfree">Sign up for free</div>
+        </div>
+      </section>
+      <section class="videoguide">
+        <div class="imgborder">
+          <video
+            class="vidpic"
+            type="video/mp4"
+            poster="./images/videoimage.png"
+          >
+            <source
+              src="https://storage.googleapis.com/slite-cdn/videos/Complete_Official(compressed).mp4"
+            />
+          </video>
+        </div>
+        <div class="bulletbox">
+          <h2>Designed for</h2>
+          <ol>
+            <li class="hover2">
+              All types of knowledge
+              <div class="circle"></div>
+              <div class="number">1.</div>
+              <div class="arrow">&darr;</div>
+            </li>
+            <li class="hover2">
+              Instant trusted answers
+              <div class="circle"></div>
+              <div class="number">2.</div>
+              <div class="arrow">&darr;</div>
+            </li>
+            <li class="hover2">
+              Knowledge management at scale
+              <div class="circle"></div>
+              <div class="number">3.</div>
+              <div class="arrow">&darr;</div>
+            </li>
+          </ol>
+        </div>
+      </section>
+      <section class="overview">
+        <h3>Designed for all types of knowledge.</h3>
+        <p>
+          From onboarding guides to all-hands notes, Slite is flexible to easily
+          document all types of company knowledge.
+        </p>
+      </section>
+      <section class="ai"></section>
+      <section class="recommend"></section>
+      <section class="howitworks"></section>
+      <section class="management"></section>
+      <section class="casestudy"></section>
+      <section class="time"></section>
+      <section class="reviews"></section>
+      <section class="trial"></section>
+      <section class="bottomnav"></section>
+      <footer></footer>
+    </div>
   </body>
 </html>
