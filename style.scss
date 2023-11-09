@@ -29,13 +29,32 @@
 }
 @keyframes moveuponload {
   0% {
-    transform: translateY(60%);
+    transform: translateY(100%);
   }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@keyframes moveuponload2 {
   0% {
+    transform: translateY(30%);
+  }
+  50% {
     transform: translateY(30%);
   }
   100% {
     transform: translateY(0%);
+  }
+}
+@keyframes movefaruponload {
+  0% {
+    transform: translateY(100%);
+  }
+  50% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0px);
   }
 }
 @keyframes fadeonload {
@@ -47,6 +66,50 @@
   }
 }
 
+@keyframes fadeonload2 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes shadowonload {
+  0% {
+    box-shadow: 0 0 0 0 rgba(204, 204, 204, 0.33);
+  }
+  99% {
+    box-shadow: 0 0 0 0 rgba(204, 204, 204, 0.33);
+  }
+  100% {
+    box-shadow: 0 0 15px 6px rgba(204, 204, 204, 0.33);
+  }
+}
+@keyframes centerleftload {
+  0% {
+    transform: translate(300%, -50%);
+  }
+  33% {
+    transform: translate(300%, -50%);
+  }
+  100% {
+    transform: translate(0%, 0%);
+  }
+}
+@keyframes centerrightload {
+  0% {
+    transform: translate(-300%, -50%);
+  }
+  33% {
+    transform: translate(-300%, -50%);
+  }
+  100% {
+    transform: translate(0%, 0%);
+  }
+}
 %linkreset {
   font: inherit;
   text-decoration: inherit;
@@ -60,6 +123,7 @@
   @include margin(0);
   max-width: 100vw;
 }
+
 .logo {
   width: 100px;
   @include padding(20px);
@@ -271,15 +335,17 @@ input[type="checkbox"]:checked ~ label .line-3 {
 }
 
 // introduction section
-
+.introduction {
+  margin-left: 20px;
+  margin-right: 20px;
+  hyphens: auto;
+}
 h1,
 h3 {
   @include font(4rem, 500);
   text-align: center;
   @include padding(30px);
-  padding-top: 50px;
   padding-bottom: 0px;
-  hyphens: auto;
 }
 p {
   @include font(1.8rem, 300);
@@ -422,6 +488,188 @@ ol > li {
 }
 //
 //
+// Grid Image
+.introduction2 {
+  max-width: 1000px;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  display: none;
+}
+.container {
+  display: grid;
+  column-gap: 0;
+  row-gap: 0;
+  grid-template-columns: 0.6fr 0.6fr 1fr 42% 1fr 0.6fr 0.6fr;
+  grid-template-rows: auto;
+  width: 100%;
+  max-width: 1000px;
+  background-color: transparent;
+  justify-items: center;
+  align-items: center;
+
+  .largecell {
+    min-width: 550px;
+    max-width: 650px;
+    height: 100%;
+    grid-column: 3 / 6;
+    grid-row: 3 / 8;
+    background-color: transparent;
+  }
+  .mediumcell {
+    width: 100%;
+    max-width: 650px;
+    height: 100%;
+    grid-column: 3 / 6;
+    grid-row: 8 / 9;
+    background-color: transparent;
+  }
+  .spacecell {
+    width: 100%;
+    height: 60px;
+    grid-column: 1 / 8;
+    grid-row: 1 / 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    background-color: transparent;
+  }
+  .cell1 {
+    width: 130%;
+    height: 130%;
+    grid-column: 1 / 3;
+    grid-row: 8 / 9;
+    z-index: 1;
+    background-color: transparent;
+    .collage {
+      transform: translate(-1.5vw, -2vw);
+    }
+  }
+  .cell2 {
+    width: 220%;
+    height: 150%;
+    grid-column: 2 / 3;
+    grid-row: 7 / 8;
+    background-color: transparent;
+
+    .collage {
+      transform: translate(2vw, 1vw);
+    }
+  }
+  .cell3 {
+    width: 170%;
+    height: 200%;
+    grid-column: 1 / 2;
+    grid-row: 6 / 7;
+    background-color: transparent;
+
+    .collage {
+      transform: translate(6.7vw, 4.5vw);
+    }
+  }
+  .cell4 {
+    width: 150%;
+    height: 150%;
+    grid-column: 1 / 2;
+    grid-row: 5 / 6;
+    background-color: transparent;
+
+    .collage {
+      transform: translate(1vw, 3vw);
+    }
+  }
+  .cell5 {
+    width: 130%;
+    height: 130%;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    background-color: transparent;
+
+    .collage {
+      transform: translate(-3vw, 2.5vw);
+    }
+  }
+  .cell6 {
+    width: 50%;
+    height: 50%;
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+    background-color: transparent;
+
+    .collage {
+      transform: translate(-1vw, -5.5vw);
+    }
+  }
+  .cell7 {
+    width: 100%;
+    height: 100%;
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+
+    .collage {
+      max-height: 130px;
+      width: auto;
+    }
+  }
+  .cell8 {
+    width: 50%;
+    height: 50%;
+    grid-column: 5 / 6;
+    grid-row: 2 / 3;
+    background-color: transparent;
+    transform: rotate(10deg);
+
+    .collage {
+      transform: translate(-2vw, -5.5vw);
+    }
+  }
+  .cell9 {
+    width: 150%;
+    height: 150%;
+    grid-column: 6 / 7;
+    grid-row: 2 / 3;
+    background-color: transparent;
+    transform: rotate(10deg);
+
+    .collage {
+      transform: translate(-1vw, 6.5vw);
+    }
+  }
+  .cell10 {
+    width: 180%;
+    height: 180%;
+    grid-column: 6 / 7;
+    grid-row: 4 / 5;
+    background-color: transparent;
+    z-index: 2;
+
+    .collage {
+      transform: translate(7vw, 16.5vw);
+    }
+  }
+  .cell11 {
+    width: 150%;
+    height: 150%;
+    grid-column: 6 / 8;
+    grid-row: 8 / 9;
+    background-color: transparent;
+    .collage {
+      transform: translate(2vw, -5vw);
+      z-index: 1;
+    }
+  }
+  .collage {
+    width: 100%;
+    background-color: transparent;
+  }
+}
+
+//
+//
 // Media Queries
 @media screen and (min-width: 480px) {
   // This will be smallest drop off to 1 column testimonials, 1 column in bottom icons and 2 columns in bottom nav
@@ -537,18 +785,15 @@ ol > li {
     transition: none;
   }
   .introduction {
-    width: 65%;
-    max-width: 600px;
-    margin: 0 auto;
+    display: none;
+  }
+  .introduction2 {
+    display: initial;
+    display: flex;
+    justify-content: center;
   }
   h1 {
-    font-size: 6.2rem;
-  }
-  //
-  //
-  // Animations
-  .introduction {
-    animation: fadeonload 1.2s ease-in-out, moveuponload 0.7s ease-in-out;
+    font-size: 6rem;
   }
 }
 @media screen and (min-width: 990px) {
@@ -651,5 +896,29 @@ ol > li {
 //
 // Animations
 .navbarcase {
-  animation: droponload 1.5s ease-in-out;
+  animation: droponload 1.5s ease-in-out, shadowonload 5s ease-in-out;
+}
+.cell7 {
+  animation: moveuponload 0.75s ease-in-out, fadeonload 1s ease-in-out;
+}
+.cell1,
+.cell11,
+.largecell,
+.mediumcell {
+  animation: moveuponload2 1.2s ease-in-out, fadeonload2 1.2s ease-in-out;
+}
+
+.cell2 {
+  animation: movefaruponload 1.2s ease-in-out, fadeonload2 1.2s ease-in-out;
+}
+.cell3,
+.cell4,
+.cell5,
+.cell6 {
+  animation: centerleftload 3s ease-in-out, fadeonload2 3s ease-in-out;
+}
+.cell8,
+.cell9,
+.cell10 {
+  animation: centerrightload 3s ease-in-out, fadeonload2 3s ease-in-out;
 }
