@@ -807,6 +807,31 @@ h4 {
   flex-direction: column;
   justify-content: center;
 }
+
+//
+//
+// Recommend
+.recommend {
+  text-align: center;
+  margin: 10px;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+.sponsorgrid {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  row-gap: 2rem;
+  column-gap: 2rem;
+  padding: 20px;
+}
+.sponsorpic {
+  max-height: 35px;
+  max-width: 100%;
+}
 //
 //
 // Footer
@@ -817,6 +842,42 @@ h4 {
   width: 100%;
 }
 
+//
+//
+// How it works
+
+.howitworks {
+  background-color: #2f2f30;
+  color: white;
+  margin: 0;
+}
+.howitworks div {
+  background-color: #2f2f30;
+}
+.topwave {
+  width: 100vw;
+  background-color: transparent;
+  margin-bottom: -3px;
+}
+.bottomwave {
+  width: 100vw;
+  transform: rotate(180deg);
+  background-color: transparent;
+  margin-top: -10px;
+}
+.wavepic {
+  height: auto;
+}
+h5 {
+  @include font(4rem, 500);
+  color: white;
+  background-color: #2f2f30;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  margin-bottom: -3px;
+  background-color: #2f2f30;
+}
 //
 //
 // Media Queries
@@ -859,6 +920,21 @@ h4 {
     padding: 0px;
     margin-top: 10px;
     transition: none;
+  }
+
+  //
+  //
+  // Recommend
+  .sponsorgrid {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    max-width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 2rem;
+    column-gap: 2rem;
+    padding: 20px;
   }
 }
 @media screen and (min-width: 760px) {
@@ -1190,6 +1266,20 @@ h4 {
     flex-direction: row;
     justify-content: left;
     text-align: left;
+  }
+  //
+  //
+  // Recommend
+  .sponsorgrid {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    max-width: 100%;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    row-gap: 2rem;
+    column-gap: 2rem;
+    padding: 20px;
   }
 }
 
