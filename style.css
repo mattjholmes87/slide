@@ -944,9 +944,14 @@ h4 {
   background-color: #2f2f30;
   color: white;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
-.howitworks div {
+.howitworks .div {
   background-color: #2f2f30;
 }
 
@@ -970,15 +975,554 @@ h4 {
 h5 {
   font-family: "Noto Sans", sans-serif;
   color: black;
-  font-size: 4rem;
+  font-size: 3.4rem;
   font-weight: 500;
   color: white;
   background-color: #2f2f30;
   text-align: center;
   padding: 0;
   margin: 0;
-  margin-bottom: -3px;
+  margin-bottom: 30px;
   background-color: #2f2f30;
+}
+
+h6 {
+  font-family: "Noto Sans", sans-serif;
+  color: black;
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: white;
+  background-color: #2f2f30;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 30px;
+  background-color: #2f2f30;
+}
+
+.purplebutton {
+  width: auto;
+  text-align: center;
+  font-family: "Noto Sans", sans-serif;
+  color: black;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: white;
+  background-color: #9958e1;
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border-radius: 25px;
+  margin-bottom: 20px;
+}
+
+.greytext {
+  font-family: "Noto Sans", sans-serif;
+  color: black;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #98999a;
+  background-color: transparent;
+  letter-spacing: 1px;
+}
+
+.aianimation {
+  width: 80%;
+  max-width: 600px;
+  background-color: transparent;
+}
+
+.animationscreenshot {
+  width: 100%;
+  background-color: transparent;
+}
+
+.blackbackground {
+  text-align: center;
+  font-family: "Noto Sans", sans-serif;
+  color: black;
+  font-size: 1.6rem;
+  font-weight: 300;
+  background-color: #2f2f30;
+  color: white;
+  width: 80%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  max-width: 600px;
+  align-self: center;
+}
+
+.greybutton {
+  width: 90%;
+  text-align: center;
+  font-family: "Noto Sans", sans-serif;
+  color: black;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: white;
+  background-color: #2f2f30;
+  border: 1px solid white;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  border-radius: 30px;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.greybutton:hover {
+  background-color: white;
+  color: #2f2f30;
+}
+
+.blackcontainer {
+  background-color: #2f2f30;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: calc(100% - 40px);
+  max-width: 1100px;
+  margin: 20px;
+  margin-top: 120px;
+  margin-bottom: 120px;
+  padding: 40px;
+  border: 0.5px solid #98999a;
+  border-radius: 10px;
+}
+
+.blackbackground.large {
+  text-align: center;
+  font-family: "Noto Sans", sans-serif;
+  color: black;
+  font-size: 2.2rem;
+  font-weight: 300;
+  background-color: #2f2f30;
+  color: white;
+  width: 90%;
+  max-width: 900px;
+}
+
+.staffbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: auto;
+}
+
+.staffbox,
+.staffimage,
+.staffdetails,
+.title,
+.workplace {
+  background-color: #2f2f30;
+}
+
+.staffimage {
+  width: 80px;
+}
+
+.title {
+  padding: 10px;
+  font-family: "Noto Sans", sans-serif;
+  color: black;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #98999a;
+}
+.title .workplace {
+  font-family: "Noto Sans", sans-serif;
+  color: black;
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: #98999a;
+}
+
+.howcontainer {
+  width: calc(100% - 60px);
+  max-width: 1100px;
+  margin: 30px;
+  background-color: #444445;
+  border-radius: 10px;
+  justify-content: left;
+}
+
+.howcontainer.one {
+  width: calc(100% - 60px);
+  max-width: 1100px;
+  margin: 30px;
+  background-color: #444445;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(5, auto);
+  justify-content: left;
+}
+.howcontainer.one .gridcell {
+  border-radius: 10px;
+  margin: 20px;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+.howcontainer.one .gridcell div {
+  max-width: 100%;
+  background-color: transparent;
+  margin: 20px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.howcontainer.one .gridcell div img {
+  max-width: 100%;
+}
+.howcontainer.one .gridcell .numberheader {
+  font-family: "Noto Sans", sans-serif;
+  color: black;
+  font-size: 2rem;
+  font-weight: 500;
+}
+.howcontainer.one .gridcell .subheading {
+  font-family: "Noto Sans", sans-serif;
+  color: black;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+.howcontainer.one .gridcell .button {
+  font-family: "Noto Sans", sans-serif;
+  color: black;
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: white;
+  background-color: #f67748;
+  width: 100px;
+  border-radius: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+}
+.howcontainer.one .gridcell .button img {
+  width: 25px;
+  background-color: transparent;
+  padding: 2px;
+  padding-right: 5px;
+}
+.howcontainer.one .gridcell .textbox {
+  font-family: "Noto Sans", sans-serif;
+  color: black;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.howcontainer.one .gridcell .imgbox {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.howcontainer.one .gridcell .imgbox img {
+  background-color: transparent;
+  max-height: 150px;
+  margin: 0px;
+}
+.howcontainer.one .gridcell .hoverbutton {
+  background-color: rgba(255, 255, 255, 0.713);
+  margin: 0px;
+  position: absolute;
+  bottom: 20px;
+  right: 10px;
+  font-family: "Noto Sans", sans-serif;
+  color: black;
+  font-size: 1.4rem;
+  font-weight: 400;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 5px;
+}
+.howcontainer.one .gridcell.one {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 1;
+  margin: 10px;
+  min-width: calc(100% - 20px);
+}
+.howcontainer.one .gridcell.two {
+  background-color: #ffddd1;
+  margin: 10px;
+  justify-self: center;
+}
+.howcontainer.one .gridcell.three {
+  background-color: #f7e3ea;
+  margin: 10px;
+  justify-self: center;
+}
+.howcontainer.one .gridcell.four {
+  margin: 10px;
+  background-color: white;
+  justify-self: center;
+  width: 100%;
+}
+.howcontainer.one .gridcell.five {
+  background-color: white;
+  margin: 10px;
+  justify-self: center;
+  width: 100%;
+}
+.howcontainer.one div,
+.howcontainer.one p {
+  background-color: #444445;
+  margin: 10px;
+  text-align: left;
+  padding: 0px;
+  font-family: "Noto Sans", sans-serif;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: white;
+}
+.howcontainer.one h6 {
+  background-color: #444445;
+  margin: 10px;
+  text-align: left;
+  padding: 0px;
+  font-family: "Noto Sans", sans-serif;
+  color: black;
+  font-size: 2rem;
+  font-weight: 400;
+  color: white;
+}
+.howcontainer.one .purplebutton {
+  width: 120px;
+  text-align: center;
+  font-family: "Noto Sans", sans-serif;
+  color: black;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: white;
+  background-color: #9958e1;
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 25px;
+}
+
+.howcontainer.two,
+.howcontainer.three {
+  width: calc(100% - 60px);
+  max-width: 1100px;
+  height: auto;
+  margin: 30px;
+  padding: 20px;
+  background-color: #444445;
+  border-radius: 15px;
+  position: relative;
+}
+.howcontainer.two div,
+.howcontainer.three div {
+  background-color: #444445;
+  border-radius: 15px;
+  margin: 20px;
+}
+.howcontainer.two div .imageunderlay,
+.howcontainer.three div .imageunderlay {
+  background-color: white;
+  width: 80%;
+  max-width: 560px;
+  padding: 10%;
+  transform: translateX(20px);
+}
+.howcontainer.two div .imageoverlay,
+.howcontainer.three div .imageoverlay {
+  margin: 0px;
+  width: 30%;
+  max-width: 190px;
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  box-shadow: 0px 0px 5px 2px rgba(239, 239, 239, 0.6235294118);
+  border-radius: 5px;
+}
+.howcontainer.two div .imageright,
+.howcontainer.three div .imageright {
+  background-color: white;
+  width: 100%;
+  max-width: calc(100% - 30px);
+  height: calc(100% - 60px);
+  max-height: 100%;
+  padding-top: 5%;
+  padding-left: 5%;
+  padding-bottom: 5%;
+  padding-right: 0px;
+  overflow: hidden;
+}
+.howcontainer.two div .button,
+.howcontainer.three div .button {
+  font-family: "Noto Sans", sans-serif;
+  color: black;
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: #974e01;
+  background-color: #f67748;
+  width: auto;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: absolute;
+}
+.howcontainer.two div .button.one,
+.howcontainer.three div .button.one {
+  background-color: #d3f7f9;
+  height: 25px;
+  top: 5%;
+  left: 70px;
+}
+.howcontainer.two div .button.two,
+.howcontainer.three div .button.two {
+  background-color: #fff3c2;
+  height: 25px;
+  top: 5%;
+  left: 110px;
+}
+.howcontainer.two div .button.three,
+.howcontainer.three div .button.three {
+  background-color: #ffe6cc;
+  height: 25px;
+  top: 5%;
+  left: 20px;
+}
+.howcontainer.two div .button.three img,
+.howcontainer.three div .button.three img {
+  width: 25px;
+  background-color: transparent;
+  fill: #974e01;
+  padding: 2px;
+  padding-right: 5px;
+}
+.howcontainer.two .imagebox,
+.howcontainer.three .imagebox {
+  margin: 0px;
+  width: calc(100% - 20px);
+  background-color: white;
+  transform: translate(-20px, 20px);
+  border-radius: 0px 15px 0px 15px;
+}
+.howcontainer.two .strikeout,
+.howcontainer.three .strikeout {
+  text-decoration: line-through;
+}
+.howcontainer.two h6,
+.howcontainer.three h6 {
+  background-color: #444445;
+  text-align: left;
+  font-family: "Noto Sans", sans-serif;
+  color: black;
+  font-size: 2rem;
+  font-weight: 400;
+  color: white;
+}
+.howcontainer.two .greytext,
+.howcontainer.three .greytext {
+  font-size: 1.4rem;
+}
+.howcontainer.two p,
+.howcontainer.three p {
+  background-color: #444445;
+  margin: 20px;
+  text-align: left;
+  padding: 0px;
+  font-family: "Noto Sans", sans-serif;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: white;
+}
+
+.howcontainer.three .imagebox {
+  margin: 0px;
+  width: calc(100% - 20px);
+  background-color: white;
+  transform: translate(20px, 20px);
+  border-radius: 15px 0px 15px 0px;
+  display: flex;
+  justify-content: right;
+  transform: translate(40px, 20px);
+}
+
+#purplebutton {
+  width: 120px;
+  text-align: center;
+  font-family: "Noto Sans", sans-serif;
+  color: black;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: white;
+  background-color: #9958e1;
+  padding-left: 18px;
+  padding-right: 18px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  margin: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 25px;
+}
+
+.howlargecontainer {
+  background-color: #2f2f30;
+  display: grid;
+  max-width: 1100px;
+  justify-items: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto auto;
+}
+.howlargecontainer .blackbackground.large {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+.howlargecontainer .howcontainer.one {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+.howlargecontainer .howcontainer.two {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+.howlargecontainer .howcontainer.three {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 4;
+  grid-row-end: 5;
+}
+.howlargecontainer .greybutton.long {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 5;
+  grid-row-end: 6;
+  width: 90%;
+  max-width: 90%;
 }
 
 @media screen and (min-width: 480px) {
@@ -1035,6 +1579,176 @@ h5 {
          column-gap: 2rem;
     padding: 20px;
   }
+  .howcontainer.one {
+    width: calc(100% - 60px);
+    max-width: 1100px;
+    margin: 30px;
+    background-color: #444445;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto auto;
+    justify-content: left;
+  }
+  .howcontainer.one .gridcell {
+    border-radius: 10px;
+    margin: 20px;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+  }
+  .howcontainer.one .gridcell div {
+    max-width: 100%;
+    background-color: transparent;
+    margin: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  .howcontainer.one .gridcell div img {
+    max-width: 100%;
+  }
+  .howcontainer.one .gridcell .numberheader {
+    font-family: "Noto Sans", sans-serif;
+    color: black;
+    font-size: 2rem;
+    font-weight: 500;
+  }
+  .howcontainer.one .gridcell .subheading {
+    font-family: "Noto Sans", sans-serif;
+    color: black;
+    font-size: 1.6rem;
+    font-weight: 400;
+  }
+  .howcontainer.one .gridcell .button {
+    font-family: "Noto Sans", sans-serif;
+    color: black;
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: white;
+    background-color: #f67748;
+    width: 100px;
+    border-radius: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+  }
+  .howcontainer.one .gridcell .button img {
+    width: 25px;
+    background-color: transparent;
+    padding: 2px;
+    padding-right: 5px;
+  }
+  .howcontainer.one .gridcell .textbox {
+    font-family: "Noto Sans", sans-serif;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+  .howcontainer.one .gridcell .imgbox {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .howcontainer.one .gridcell .imgbox img {
+    background-color: transparent;
+    max-height: 150px;
+    margin: 0px;
+  }
+  .howcontainer.one .gridcell .hoverbutton {
+    background-color: rgba(255, 255, 255, 0.713);
+    margin: 0px;
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+    font-family: "Noto Sans", sans-serif;
+    color: black;
+    font-size: 1.4rem;
+    font-weight: 400;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+  }
+  .howcontainer.one .gridcell.one {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    margin: 10px;
+    min-width: calc(100% - 20px);
+  }
+  .howcontainer.one .gridcell.two {
+    background-color: #ffddd1;
+    margin-bottom: 0px;
+    margin-right: 10px;
+    justify-self: center;
+  }
+  .howcontainer.one .gridcell.three {
+    background-color: #f7e3ea;
+    margin-bottom: 0px;
+    margin-left: 10px;
+  }
+  .howcontainer.one .gridcell.four {
+    margin: 10px;
+    width: calc(100% - 20px);
+    background-color: white;
+  }
+  .howcontainer.one .gridcell.five {
+    background-color: white;
+    margin: 10px;
+    width: calc(100% - 20px);
+  }
+  .howcontainer.one div,
+  .howcontainer.one p {
+    background-color: #444445;
+    margin: 10px;
+    text-align: left;
+    padding: 0px;
+    font-family: "Noto Sans", sans-serif;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: white;
+  }
+  .howcontainer.one h6 {
+    background-color: #444445;
+    margin: 10px;
+    text-align: left;
+    padding: 0px;
+    font-family: "Noto Sans", sans-serif;
+    color: black;
+    font-size: 2rem;
+    font-weight: 400;
+    color: white;
+  }
+  .howcontainer.one .purplebutton {
+    width: 120px;
+    text-align: center;
+    font-family: "Noto Sans", sans-serif;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: white;
+    background-color: #9958e1;
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 25px;
+  }
 }
 @media screen and (min-width: 760px) {
   .videoguide {
@@ -1042,6 +1756,7 @@ h5 {
     flex-direction: row;
     justify-content: center;
     justify-content: space-around;
+    margin-top: 80px;
   }
   .imgborder {
     display: flex;
@@ -1065,7 +1780,6 @@ h5 {
     border-radius: 15px;
   }
   .bulletbox {
-    margin-top: 80px;
     width: 30%;
   }
   .level1 {
@@ -1143,6 +1857,50 @@ h5 {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     row-gap: 10px;
+  }
+  .howcontainer.one {
+    width: calc(100% - 60px);
+    max-width: 1100px;
+    margin: 30px;
+    padding: 20px;
+    background-color: #444445;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    justify-content: left;
+  }
+  .howcontainer.one .gridcell.one {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    margin: 10px;
+    min-width: 100%;
+    align-self: center;
+  }
+  .howlargecontainer .greybutton.long {
+    width: 200px;
+    max-width: 200px;
+    justify-self: center;
+  }
+  h5 {
+    font-size: 4rem;
+    padding-bottom: 100px;
+  }
+  .blackbackground {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  .greybutton {
+    width: 200px;
+  }
+  .blackcontainer {
+    margin: 40px;
+    width: calc(100% - 80px);
+  }
+  h6 {
+    margin-bottom: 0px;
   }
 }
 @media screen and (min-width: 990px) {
@@ -1402,6 +2160,85 @@ h5 {
     -moz-column-gap: 2rem;
          column-gap: 2rem;
     padding: 20px;
+  }
+  .howcontainer.one {
+    width: calc(100% - 60px);
+    max-width: 1100px;
+    margin: 30px;
+    padding: 60px;
+    background-color: #444445;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    justify-content: left;
+  }
+  .howcontainer.one .gridcell.one {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    margin: 10px;
+    min-width: 100%;
+    align-self: center;
+  }
+  .howlargecontainer {
+    background-color: #2f2f30;
+    display: grid;
+    max-width: 1100px;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+  }
+  .howlargecontainer .blackbackground.large {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  .howlargecontainer .howcontainer.one {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  .howlargecontainer .howcontainer.two {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+  .howlargecontainer .howcontainer.three {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+  .howlargecontainer .greybutton.long {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    width: 200px;
+    max-width: 200px;
+    justify-self: center;
+  }
+  .blackcontainer {
+    margin-top: 100px;
+    margin-bottom: 20px;
+  }
+  .blackbackground.large {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .howcontainer.two div,
+  .howcontainer.three div,
+  .howcontainer.two p,
+  .howcontainer.three p {
+    margin: 50px;
+  }
+  .imageunderlay {
+    margin-bottom: 80px;
   }
 }
 @media screen and (min-width: 1100px) {
